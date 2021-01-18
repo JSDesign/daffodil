@@ -1,0 +1,9 @@
+
+# Code things
+node_modules/
+.next/
+
+# Other things
+.DS_Store
+.vscode/
+.idea/
