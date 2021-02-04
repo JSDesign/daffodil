@@ -2,6 +2,7 @@
 # Code things
 node_modules/
 .next/
+.env
 
 # Other things
 .DS_Store

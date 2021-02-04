@@ -1,12 +1,16 @@
-import Link from 'next/link';
+// import 'bootstrap/scss/bootstrap.scss';
+import '../scss/global.scss';
+import Navbar from '../components/Navbar';
+import CartProvider from '../context/Cart';
+import CartMini from '../components/CartMini';
 
 const MyApp = ({ Component, pageProps })  => {
     return (
-        <>
-            <Link href="/"><a>Home</a></Link>
-            <Link href="/about"><a>About</a></Link>
+        <CartProvider>
+            <Navbar />
             <Component {...pageProps} />
-        </>
+            <CartMini />
+        </CartProvider>
     )
 };
 

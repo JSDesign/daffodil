@@ -1,0 +1,80 @@
+// Global SCSS file
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+// Write theme customizations here
+// Bootstrap variables must be redefined here
+// LINKS
+$link-decoration: none;
+
+// FONTS
+$font-family-sans-serif: 'Mulish', sans-serif;
+
+// COLORS
+$gray-100: #f8f9fa;
+$gray-600: #6c757d;
+$gray-900: #212529;
+
+$blue:    #0d6efd;
+$red:     #dc3545;
+$yellow:  #ffc107;
+$green:   #198754;
+$cyan:    #0dcaf0;
+
+$primary:   $blue;
+$secondary: $gray-600;
+$success:   $green;
+$info:      $cyan;
+$warning:   $yellow;
+$danger:    $red;
+$light:     $gray-100;
+$dark:      $gray-900;
+
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+);
+
+$custom-colors: (
+    'badass': #bada55,
+    'white': #fff
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Bootstrap Source
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Create other custom SCSS here
+svg[class*='bi '] {
+    margin-top: -0.22em;
+}
+
+.product {
+    min-height: 264px;
+}
+
+.cart-mini {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1040;
+    transition: transform ease-in-out 200ms;
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    &.is-closed {
+        transform: translateX(100%);
+    }
+}

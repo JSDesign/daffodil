@@ -13,8 +13,13 @@
   "author": "Jeannie Stevenson",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.0-beta1",
+    "gray-matter": "^4.0.2",
+    "marked": "^1.2.7",
     "next": "^10.0.5",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "sass": "^1.32.5"
   }
 }
