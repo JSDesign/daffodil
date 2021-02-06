@@ -7,12 +7,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "predev": "node ./buildSLFContent.js",
+    "prebuild": "node ./buildSLFContent.js"
   },
   "keywords": [],
   "author": "Jeannie Stevenson",
   "license": "ISC",
   "dependencies": {
+    "@stripe/stripe-js": "^1.12.1",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.0-beta1",
     "gray-matter": "^4.0.2",
@@ -20,6 +23,7 @@
     "next": "^10.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "sass": "^1.32.5"
+    "sass": "^1.32.5",
+    "stripe": "^8.134.0"
   }
 }
